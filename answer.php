@@ -43,17 +43,26 @@
     </header>
     <main class="mdl-layout__content">
       <div class="right-image">
-        <img src="./images/area_of_trinagle.png" alt="triangle" />
+        <img src="./images/area_of_triangle.png" alt="triangle image" width="250" />
       </div>
       <div class="page-content-php">
         <div id="user-info">
-          The area is: 8 cm². </div>
-        </br>
+          <?php
+          $baseLengthOfTriangle = $_GET["base-length-of-triangle"];
+          $heightOfTriangle = $_GET["height-of-triangle"];
+
+          // Process
+          $area = $baseLengthOfTriangle * $heightOfTriangle / 2;
+
+          // Output
+          echo "If a triangle has length = " . $baseLengthOfTriangle . " cm and the height = " . $heightOfTriangle . " cm:";
+          echo "<br />";
+          echo "<br />";
+          echo "The area of the triangle is " . $area . " cm².";
+          ?>
+        </div>
       </div>
-      <a href="./index.php">Return ...</a>
-  </div>
-  </div>
-  </main>
+    </main>
   </div>
 </body>
 
